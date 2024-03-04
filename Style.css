@@ -5,6 +5,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    
 }
 nav{
     display: flex;
@@ -15,15 +16,22 @@ nav{
     font-size: 28px;
     height: 90px;
 }
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
 .container{
     width: 500px;
     padding: 22px;
     background-color: #fff;
     box-shadow: 1px 3px 3px 3px rgb(215, 215, 215);
     border-radius: 6px;
-    position: relative;
+    
+    /* position: relative;
     top: 43px;
-    margin: auto;
+    margin: auto; */
 }
 .searchBar{
     display: flex;

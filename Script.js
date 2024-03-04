@@ -14,9 +14,10 @@ const getData = async (searchValue) => {
         <p>Meaning : <span>${jsonData[0].meanings[0].definitions[0].definition}</span></p>
         <p>Example : <span>${jsonData[0].meanings[0].definitions[0].example === undefined ? "Not Found" : jsonData[0].meanings[0].definitions[0].example}</span></p>
         <p>Synonyms : <span> ${jsonData[0].meanings[0].synonyms[0] === undefined ? "Not Found" : jsonData[0].meanings[0].synonyms[0]}</span></p>
-        <a href=${jsonData[0].sourceUrls } target="_blank" >Read More</a>
+        <a href=${jsonData[0].sourceUrls } target="_self" >Read More</a>
         `
         document.querySelector(".text").appendChild(div);
+
     }
     catch(error){
         document.querySelector(".text").innerHTML="<h1>Not Found</h1>"
@@ -30,6 +31,7 @@ const getData = async (searchValue) => {
 
  searchBtn.addEventListener("click", function(){
     let searchValue = searchInput.value;
+    document.querySelector(".text").innerHTML="<p>Loading</p>"
     if(searchValue == ""){
         alert("First Enter Something");
     }else{
